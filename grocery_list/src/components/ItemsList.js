@@ -1,11 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import PurchaseButton from './PurchaseButton';
 
 
 
 
 const ItemsList = (props) => {
-  const { items } = props;
+  const {
+    items,
+    purchaseItem
+  } = props;
 
   const itemsList = items.map((item) => (
     <div className="card" key={ `item-${ item.id }` }>
@@ -17,7 +21,10 @@ const ItemsList = (props) => {
         <h4>Name: { item.name }</h4>
         <h5>Category: { item.category }</h5>
         <p>Description: { item.description }</p>
-        <p>Status: { item.purchased ? 'Purchased' : 'Available' }</p>
+
+        <PurchaseButton
+          purchased={ item.purchased }
+          onClick={ () => purchaseItem(item.id) } />
       </div>
     </div>
   ));
@@ -37,7 +44,8 @@ const ItemsList = (props) => {
 
 
 ItemsList.propTypes = {
-  items: PropTypes.array.isRequired
+  items: PropTypes.array.isRequired,
+  purchaseItem: PropTypes.func.isRequired
 };
 
 

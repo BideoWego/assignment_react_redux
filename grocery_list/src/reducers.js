@@ -15,7 +15,6 @@ export default function items(state=[], action) {
 
 
   reducers[CREATE_ITEM] = () => {
-    console.log(state, action);
     return [
       ...state,
       action.data
