@@ -1,0 +1,33 @@
+[{
+  "name": "Item 1",
+  "description": "A cool item",
+  "purchased": false,
+  "category": "Foo",
+  "id": 1
+}, {
+  "name": "Item 2",
+  "description": "A awesome item",
+  "purchased": false,
+  "category": "Foo",
+  "id": 2
+}, {
+  "name": "Item 3",
+  "description": "A gnarly item",
+  "purchased": false,
+  "category": "Bar",
+  "id": 3
+}, {
+  "name": "Item 4",
+  "description": "A rad item",
+  "purchased": false,
+  "category": "Foo",
+  "id": 4
+}]
+
+
+
+
+
+
+
+
