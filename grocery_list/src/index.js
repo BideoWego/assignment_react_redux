@@ -14,7 +14,11 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 
 
-let store = createStore(groceryApp, { items });
+let store = createStore(groceryApp, {
+  items,
+  categories: ['Foo', 'Bar'],
+  fields: ['name', 'description']
+});
 
 
 

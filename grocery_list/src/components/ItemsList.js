@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import PurchaseButton from './PurchaseButton';
+import Filters from './Filters';
 
 
 
@@ -35,6 +36,7 @@ const ItemsList = (props) => {
 
   return (
     <div className="ItemsList container">
+      <Filters />
       <div className="card-deck">
         { items.length > 0 ? itemsList : noItems }
       </div>

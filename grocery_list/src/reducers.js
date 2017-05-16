@@ -67,12 +67,26 @@ export function itemSorters(state='id', action) {
 }
 
 
+export function categories(state=[]) {
+  return state;
+}
+
+
+export function fields(state=[]) {
+  return state;
+}
+
+
 
 export const groceryApp = combineReducers({
   items,
   itemFilters,
-  itemSorters
+  itemSorters,
+  categories,
+  fields
 });
+
+
 
 
 

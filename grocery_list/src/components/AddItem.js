@@ -1,9 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import CategorySelect from './CategorySelect';
 
 
 const AddItem = (props) => {
-  const { onSubmit } = props;
+  const {
+    categories,
+    onSubmit
+  } = props;
 
   return (
     <form className="container" onSubmit={ onSubmit }>
@@ -21,7 +25,9 @@ const AddItem = (props) => {
 
       <div className="form-group">
         <label htmlFor="item_category">Category</label>
-        <input type="text" className="form-control" name="item[category]" id="item_category" />
+        <CategorySelect
+          name="item[category]"
+          categories={ categories } />
       </div>
 
       <div className="form-group">
@@ -38,6 +44,7 @@ const AddItem = (props) => {
 
 
 AddItem.propTypes = {
+  categories: PropTypes.array.isRequired,
   onSubmit: PropTypes.func.isRequired
 };
 

@@ -4,6 +4,11 @@ import { createItem } from '../actions';
 import AddItem from '../components/AddItem';
 
 
+const mapStateToProps = (state) => {
+  return {
+    categories: state.categories
+  };
+};
 
 
 const mapDispatchToProps = (dispatch) => {
@@ -24,7 +29,7 @@ const mapDispatchToProps = (dispatch) => {
 
 
 const AddItemContainer = connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps
 )(AddItem);
 
